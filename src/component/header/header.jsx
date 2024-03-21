@@ -12,6 +12,9 @@ export default function header() {
                         <Link className="link" to="/">
                             Главная
                         </Link>
+                        <Link className="link" to="/create">
+                            Добавить
+                        </Link>
                         <Link className="link" to="/catalog">
                             Каталог
                         </Link>
@@ -20,6 +23,9 @@ export default function header() {
                         </Link>
                         <Link className="link" to="/reviews">
                             Отзывы
+                        </Link>
+                        <Link className="link" to="/users">
+                            Пользователи
                         </Link>
                         <div className="profile__header">
                             <img className="profile__icon__img" src={profile_icon} alt="#" />

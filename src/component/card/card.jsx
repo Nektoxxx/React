@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Item2 from '../../assets/img/item2.png'
+import Modal from '../../component/modal/modal';
 export default function Card({name,price,id}) {
     return (
         <>
@@ -19,7 +20,9 @@ export default function Card({name,price,id}) {
                         <p>{price}$</p>
                     </div>
                 </div>
+                <Modal></Modal>
             </Link>
+            
         </>
     );
 }

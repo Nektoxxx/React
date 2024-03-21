@@ -2,10 +2,11 @@ import { useState } from 'react'
 import Item1 from '../../assets/img/item1.png'
 import Card from '../../component/card/card'
 import { pass } from '../../component/date/data'
+import Modal from '../../component/modal/modal';
 export default function Catalog() {
 
     const [query, setQuery] = useState("");
-    function search (e) {
+    function search(e) {
         setQuery(e.target.value)
     }
     const norm = pass.filter((item) => item.name.toLowerCase().includes(query.toLowerCase()))
@@ -13,23 +14,24 @@ export default function Catalog() {
     return (
         <>
             <main className="main__body mrtop">
-                
+
                 <section className="catalog__items">
                     <div className="container">
                         <div className="catalog__items_body">
                             <h2>Боевые пропуски</h2>
-                                <input type="text" onChange={search}/>
+                            <input className='modal__input' type="text" onChange={search} />
                             <div className="catalog__items_content">
                                 {norm.length ?
-                                norm.map((card, id) => {
+                                    norm.map((card, id) => {
 
-                                    return(
-                                        <Card key={id} {...card} />
-                                    )
-                                }) : 
-                                <p>динах</p>
+                                        return (
+                                            <Card key={id} {...card} />
+                                        )
+                                    }) :
+                                    <p>не получи лося</p>
+
                                 }
-                                
+
                             </div>
                         </div>
                     </div>

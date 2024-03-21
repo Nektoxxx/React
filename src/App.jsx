@@ -8,6 +8,8 @@ import Catalog from './page/catalog/catalog'
 import Item from './page/item/item'
 import Index from './page/index/index'
 import { Routes, Route } from 'react-router-dom'
+import UsersPage from './page/users/users'
+import CreatePage from './page/createPage/createPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,7 +22,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Index />}></Route>
           <Route path='/catalog' element={<Catalog />}></Route>
+          <Route path='/users' element={<UsersPage />}></Route>
           <Route path='/catalog/:id' element={<Item />}></Route>
+          <Route path='/create' element={<CreatePage />}></Route>
         </Routes>
       </body>
     </>
